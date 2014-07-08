@@ -6,6 +6,9 @@
 
 Parse HTML into [virtual-dom](https://github.com/Matt-Esch/virtual-dom) tree.
 
+This is for server-side use cases. If you're in the browser you can use
+[`vdom-virtualize`](https://github.com/marcelklehr/vdom-virtualize).
+
 ## Installation
 
 ```sh
