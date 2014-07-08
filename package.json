@@ -1,0 +1,34 @@
+{
+  "name": "html-virtualize",
+  "version": "0.1.0",
+  "description": "Parse HTML into virtual-dom tree.",
+  "main": "lib/virtualize.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha test --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/alexmingoia/html-virtualize.git"
+  },
+  "keywords": [
+    "html",
+    "virtual-dom",
+    "vdom",
+    "vtree",
+    "virtualize"
+  ],
+  "author": "Alex Mingoia <talk@alexmingoia.com>",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/alexmingoia/html-virtualize/issues"
+  },
+  "homepage": "https://github.com/alexmingoia/html-virtualize",
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^1.20.1"
+  },
+  "dependencies": {
+    "htmlparser2": "^3.7.2",
+    "vtree": "0.0.4"
+  }
+}
