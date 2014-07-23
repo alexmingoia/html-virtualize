@@ -29,6 +29,6 @@
   },
   "dependencies": {
     "htmlparser2": "^3.7.2",
-    "vtree": "0.0.4"
+    "vtree": ">=0.0.4 <=0.0.16"
   }
 }
