@@ -13,5 +13,14 @@ describe('html-virtualize', function() {
       expect(vtree.children[0]).to.have.property('tagName', 'p');
       expect(vtree.children[0].properties).to.have.property('class', 'test');
     });
+
+    it('sets the correct VirtualNode#count', function() {
+      var vtree = parse('<div id="test">Count is <span>3</span></div>');
+      expect(vtree).to.have.property('count', 3);
+      expect(vtree).to.have.property('children');
+      expect(vtree.children).to.have.property('length', 2);
+      vtree = parse('<div><p>Test</p>Test<span>Test</span></div>');
+      expect(vtree).to.have.property('count', 5);
+    });
   });
 });
