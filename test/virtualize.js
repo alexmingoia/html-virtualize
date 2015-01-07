@@ -22,5 +22,19 @@ describe('html-virtualize', function() {
       vtree = parse('<div><p>Test</p>Test<span>Test</span></div>');
       expect(vtree).to.have.property('count', 5);
     });
+
+    it('outputs text with inline formatting correctly', function() {
+      var vtree = parse('<p>paragraph start <em>italic</em> paragraph end</p>');
+      console.log(require('util').inspect(vtree, true, 10, true));
+      expect(vtree).to.have.property('count', 4);
+      expect(vtree).to.have.property('tagName', 'p');
+      expect(vtree).to.have.property('children');
+      expect(vtree.children).to.have.property('length', 3);
+      expect(vtree.children[0]).to.have.property('text', 'paragraph start ');
+      expect(vtree.children[1]).to.have.property('tagName', 'em');
+      expect(vtree.children[1].children).to.have.property('length', 1);
+      expect(vtree.children[1].children[0]).to.have.property('text', 'italic');
+      expect(vtree.children[2]).to.have.property('text', ' paragraph end');
+    });
   });
 });
