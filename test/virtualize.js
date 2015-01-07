@@ -25,7 +25,6 @@ describe('html-virtualize', function() {
 
     it('outputs text with inline formatting correctly', function() {
       var vtree = parse('<p>paragraph start <em>italic</em> paragraph end</p>');
-      console.log(require('util').inspect(vtree, true, 10, true));
       expect(vtree).to.have.property('count', 4);
       expect(vtree).to.have.property('tagName', 'p');
       expect(vtree).to.have.property('children');
