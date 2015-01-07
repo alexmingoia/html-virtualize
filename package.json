@@ -1,6 +1,6 @@
 {
   "name": "html-virtualize",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Parse HTML into virtual-dom tree.",
   "main": "lib/virtualize.js",
   "scripts": {
